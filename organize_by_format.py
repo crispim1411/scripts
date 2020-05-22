@@ -1,9 +1,3 @@
-# ctrl + Q doc
-# ctrl + N search
-# ctrl + space
-# shift + F6
-# ctrl + P parameters
-# ctrl + D duplicate
 import os
 import shutil
 
