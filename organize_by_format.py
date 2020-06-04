@@ -5,13 +5,18 @@ try:
     username = 'Crispim'
     src = os.path.join('/', 'Users', username, 'Downloads')
     dst = os.path.join('/', 'Users', username, 'Documents', 'organized')
-    folders = ["zip", "rar", "pdf", "txt", "doc", "docx", "exe", "png", "jpg", "mp4", "mvk", "iso"]
+    folders = [
+        "zip", "rar",           # compactados
+        "pdf", "txt", "doc", "docx", # texto
+        "exe", "msi",           # executáveis
+        "png", "jpg", "jpeg",   # imagens
+        "mp4", "mvk", "iso"]    # vídeos
 
-    # caso não exista a pasta de destino cria
+    # caso não exista a pasta de destino
     if not os.path.exists(dst):
         os.mkdir(dst)
 
-    # cria as pastas caso não existam
+    # cria as pastas de cada extensão caso não existam
     os.chdir(dst)
     list_src = os.listdir()
     for folder in folders:
